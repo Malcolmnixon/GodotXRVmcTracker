@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkkew3u3hi7md"]
+[gd_scene load_steps=9 format=3 uid="uid://dkkew3u3hi7md"]
 
 [ext_resource type="PackedScene" uid="uid://bhc6nngwjdvum" path="res://assets/test_chan/Test-Chan.fbx" id="1_lkeve"]
+[ext_resource type="Texture2D" uid="uid://drjoya1j38i21" path="res://assets/ambientcg.com/Carpet003_1K-JPG_Color.jpg" id="1_pfl7p"]
 [ext_resource type="PackedScene" uid="uid://cay8oh2ll7yxi" path="res://assets/test_kun/Test-Kun.fbx" id="2_67k0v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cqqj5"]
@@ -16,6 +17,14 @@ sky = SubResource("Sky_elgeq")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_603qd"]
+albedo_texture = ExtResource("1_pfl7p")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="QuadMesh" id="QuadMesh_0334b"]
+material = SubResource("StandardMaterial3D_603qd")
+size = Vector2(8, 8)
+
 [node name="Demo" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -25,6 +34,10 @@ environment = SubResource("Environment_w0xf3")
 transform = Transform3D(0.866025, -0.433013, 0.25, 0.25, 0.808013, 0.533494, -0.433013, -0.39952, 0.808012, 0, 10, 0)
 light_energy = 0.5
 shadow_enabled = true
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_0334b")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.939693, 0.0593912, -0.336824, 0, 0.984808, 0.173648, 0.34202, -0.163176, 0.925417, -0.7, 1.4, 1.2)
@@ -85,7 +98,6 @@ target = NodePath("../Test-Chan/Armature/Skeleton3D/Body")
 [node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Chan"]
 body_tracker = &"/vmc/body"
 target = NodePath("../Test-Chan/Armature/Skeleton3D")
-bone_update = 1
 
 [node name="Kun" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
@@ -143,7 +155,6 @@ target = NodePath("../Test-Kun/Armature/Skeleton3D/Body")
 [node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Kun"]
 body_tracker = &"/vmc/body"
 target = NodePath("../Test-Kun/Armature/Skeleton3D")
-bone_update = 1
 
 [editable path="Chan/Test-Chan"]
 [editable path="Kun/Test-Kun"]

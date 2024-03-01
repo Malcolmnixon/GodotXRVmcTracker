@@ -30,7 +30,7 @@ func _define_project_setting(
 func _enter_tree():
 	# Add face tracker name
 	_define_project_setting(
-			"godot_vmc_tracker/trackers/face_tracker",
+			"godot_vmc_tracker/tracking/face_tracker_name",
 			TYPE_STRING,
 			PROPERTY_HINT_NONE,
 			"",
@@ -38,15 +38,23 @@ func _enter_tree():
 
 	# Add body tracker name
 	_define_project_setting(
-			"godot_vmc_tracker/trackers/body_tracker",
+			"godot_vmc_tracker/tracking/body_tracker_name",
 			TYPE_STRING,
 			PROPERTY_HINT_NONE,
 			"",
 			"/vmc/body")
 
+	# Add position mode
+	_define_project_setting(
+			"godot_vmc_tracker/tracking/position_mode",
+			TYPE_INT,
+			PROPERTY_HINT_ENUM,
+			"Free,Calibrate,Locked",
+			"/vmc/body")
+
 	# Add network port
 	_define_project_setting(
-			"godot_vmc_tracker/network/port",
+			"godot_vmc_tracker/network/udp_listener_port",
 			TYPE_INT,
 			PROPERTY_HINT_NONE,
 			"",

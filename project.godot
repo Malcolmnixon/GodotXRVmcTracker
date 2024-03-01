@@ -23,6 +23,11 @@ VmcTracker="*res://addons/godot_vmc_tracker/vmc_tracker.gd"
 
 enabled=PackedStringArray("res://addons/godot_vmc_tracker/plugin.cfg")
 
+[godot_vmc_tracker]
+
+tracking/position=2
+tracking/position_mode=1
+
 [rendering]
 
 renderer/rendering_method="mobile"
