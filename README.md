@@ -16,6 +16,11 @@ The following branches are in active development:
 |-----------|-------------------------------|------------------|
 |  master   | Current development branch    |  Godot 4.3-dev4+ |
 
+## Usage
+
+The demo requires a VMC tracker application. One that works well is [XR Animator](https://github.com/ButzYung/SystemAnimatorOnline)
+when configured with an avatar equipped with the full ARKit 52 blendshapes.
+
 ## Licensing
 
 Code in this repository is licensed under the MIT license.
