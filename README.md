@@ -16,9 +16,15 @@ The following branches are in active development:
 |-----------|-------------------------------|------------------|
 |  master   | Current development branch    |  Godot 4.3-dev4+ |
 
+## Overview
+
+[VMC Protocol](https://protocol.vmc.info/english.html) is a network protocol for Virtual Motion Capture.
+
+![VMC Protocol Logo](/docs/vmpc_logo_128x128.png)
+
 ## Usage
 
-The following steps show how to add the VMC tracker to a project.
+The following steps show how to add the Godot VMC tracker to a project.
 
 ### Enable Addon
 
