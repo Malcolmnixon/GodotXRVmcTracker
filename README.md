@@ -18,8 +18,54 @@ The following branches are in active development:
 
 ## Usage
 
-The demo requires a VMC tracker application. One that works well is [XR Animator](https://github.com/ButzYung/SystemAnimatorOnline)
+The following steps show how to add the VMC tracker to a project.
+
+### Enable Addon
+
+The addon files needs to be copied to the `/addons/godot_vmc_tracker` folder of the Godot project, and then enabled in Plugins under the Project Settings:
+![Enable Plugin](/docs/enable_plugin.png)
+
+### Plugin Settings
+
+The plugin has numerous options to control behavior:
+
+![Plugin Options](/docs/plugin_settings.png)
+
+| Option | Description |
+| :----- | :---------- |
+| Tracking - Position Mode | Controls the position of the character:<br>- Free = Free Movement<br>- Calibrate = Calibrate to origin on first frame<br>- Locked = Lock to origin |
+| Tracking - Face Tracker Name | Name for the XRFaceTracker |
+| Tracking - Body Tracker Name | Name for the XRBodyTracker |
+| Network - Udp Listener Port | Port to listen for VMC network packets |
+
+### Character Importing
+
+The character model must be in Godot Humanoid format. This can be achieved in the importer settings by retarteting the skeleton to the SkeletonProfileHumanoid bone map:
+
+![Character Import](/docs/character_import.png)
+
+### Body Driving
+
+The body is driven using an [XRBodyModifier3D](https://docs.godotengine.org/en/latest/classes/class_xrbodymodifier3d.html) node configured to drive the skeleton of the character:
+
+![XRBodyModifier3D](/docs/xrbodymodifier3d.png)
+
+Note that the Body Tracker name should match the Body Tracker Name specified in the Plugin Settings.
+
+### Face Driving
+
+The face is driven using an [XRFaceModifier3D](https://docs.godotengine.org/en/latest/classes/class_xrfacemodifier3d.html) node configured to drive the facial blendshapes of the character:
+
+![XRFaceModifier3D](/docs/xrfacemodifier3d.png)
+
+Note that the Face Tracker name should match the Face Tracker Name specified in the Plugin Settings.
+
+### VMC Tracking Application
+
+A VMC tracking application must be used to capture the users body and face information and stream it over the VMC protocol. One option that works well is [XR Animator](https://github.com/ButzYung/SystemAnimatorOnline)
 when configured with an avatar equipped with the full ARKit 52 blendshapes.
+
+The models in the demo project use the public [Test Chan](https://kanafuyuko.booth.pm/items/5419110) and [Test Kun](https://kanafuyuko.booth.pm/items/5420804) models by Kana Fuyuko
 
 ## Licensing
 
