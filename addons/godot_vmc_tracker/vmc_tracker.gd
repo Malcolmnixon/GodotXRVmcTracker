@@ -153,7 +153,7 @@ func _on_vmc_ext_root_pos(entry : Array) -> void:
 # Handle a VMC bone position
 func _on_vmc_ext_bone_pos(entry : Array) -> void:
 	# Get the VMC joint
-	var joint : VMCBody.Joint = VMCBody.JointNames.get(entry[1], -1)
+	var joint : VMCBody.Joint = VMCBody.JOINT_NAMES.get(entry[1], -1)
 	if joint < 0:
 		return
 
@@ -188,14 +188,13 @@ func _on_vmc_ext_bone_pos(entry : Array) -> void:
 # Handle a VMC face blend value
 func _on_vmc_ext_blend_val(entry : Array) -> void:
 	# Get the VMC face blend
-	var blend : VMCBody.FaceBlend = VMCBody.FaceBlendNames.get(entry[1], -1)
+	var blend : VMCBody.FaceBlend = VMCBody.FACE_BLEND_NAMES.get(entry[1], -1)
 	if blend < 0:
 		return
 
 	# Save the face blend
 	_vmc_face_blends[blend] = entry[2]
 	_new_face_blends = true
-	pass
 
 
 # Process VMC joint data into XRBodyTracker data
@@ -203,7 +202,7 @@ func _process_joints() -> void:
 	# Iterate over the joints
 	for joint in VMCBody.Joint.COUNT:
 		# Get the joint information and relative location
-		var parent_joint := VMCBody.JointParent[joint]
+		var parent_joint := VMCBody.JOINT_PARENT[joint]
 		var pos := _vmc_rel_positions[joint]
 		var rot := _vmc_rel_rotations[joint]
 
@@ -219,7 +218,7 @@ func _process_joints() -> void:
 		_vmc_abs_rotations[joint] = rot
 
 	# Apply to the XRBodyTracker
-	for joint in VMCBody.JointMapping:
+	for joint in VMCBody.JOINT_MAPPING:
 		var body : XRBodyTracker.Joint = joint["body"]
 		var vmc : VMCBody.Joint = joint["vmc"]
 		var roll : Quaternion = joint["roll"]
@@ -252,7 +251,7 @@ func _process_joints() -> void:
 # Process VMC face blend data into XRFaceTracker
 func _process_face_blends() -> void:
 	# Apply to the XRFaceTracker
-	for blend in VMCBody.FaceBlendMapping:
+	for blend in VMCBody.FACE_BLEND_MAPPING:
 		var face : Array = blend["face"]
 		var vmc : Array = blend["vmc"]
 

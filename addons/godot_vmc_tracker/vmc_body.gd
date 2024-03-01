@@ -123,7 +123,7 @@ enum FaceBlend {
 }
 
 ## Dictionary of VMC Joint names to joints
-const JointNames := {
+const JOINT_NAMES := {
 	&"Hips" : Joint.HIPS,
 	&"Spine" : Joint.SPINE,
 	&"Chest" : Joint.CHEST,
@@ -182,7 +182,7 @@ const JointNames := {
 }
 
 ## Dictionary of VMC Face Blend names to face blends
-const FaceBlendNames := {
+const FACE_BLEND_NAMES := {
 	&"EyeLookUpLeft" : FaceBlend.EYE_LOOK_UP_LEFT,
 	&"EyeLookUpRight" : FaceBlend.EYE_LOOK_UP_RIGHT,
 	&"EyeLookDownLeft" : FaceBlend.EYE_LOOK_DOWN_LEFT,
@@ -236,7 +236,7 @@ const FaceBlendNames := {
 }
 
 ## VMC Joint Parent relationship
-const JointParent : Array[Joint] = [
+const JOINT_PARENT : Array[Joint] = [
 	-1,								# 0: Joint.HIPS
 	Joint.HIPS,						# 1: Joint.SPINE
 	Joint.SPINE,					# 2: Joint.CHEST
@@ -295,7 +295,7 @@ const JointParent : Array[Joint] = [
 ]
 
 ## Mapping of XRBodyTracker joints to VMC joints
-const JointMapping : Array[Dictionary] = [
+const JOINT_MAPPING : Array[Dictionary] = [
 	# Upper Body Joints
 	{
 		body = XRBodyTracker.JOINT_HIPS,
@@ -576,7 +576,7 @@ const JointMapping : Array[Dictionary] = [
 ]
 
 ## Mapping of XRFaceTracker blends to VMC face blends
-const FaceBlendMapping : Array[Dictionary] = [
+const FACE_BLEND_MAPPING : Array[Dictionary] = [
 	# Upper Body Joints
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_OUT_RIGHT ],
@@ -698,8 +698,8 @@ const FaceBlendMapping : Array[Dictionary] = [
 	},
 	{
 		face = [ XRFaceTracker.FT_CHEEK_PUFF,
-				 XRFaceTracker.FT_CHEEK_PUFF_RIGHT,
-				 XRFaceTracker.FT_CHEEK_PUFF_LEFT ],
+				XRFaceTracker.FT_CHEEK_PUFF_RIGHT,
+				XRFaceTracker.FT_CHEEK_PUFF_LEFT ],
 		vmc = [ FaceBlend.CHEEK_PUFF ],
 	},
 	{
@@ -724,14 +724,14 @@ const FaceBlendMapping : Array[Dictionary] = [
 	},
 	{
 		face = [ XRFaceTracker.FT_LIP_FUNNEL,
-				 XRFaceTracker.FT_LIP_FUNNEL_UPPER,
-				 XRFaceTracker.FT_LIP_FUNNEL_LOWER ],
+				XRFaceTracker.FT_LIP_FUNNEL_UPPER,
+				XRFaceTracker.FT_LIP_FUNNEL_LOWER ],
 		vmc = [ FaceBlend.MOUTH_FUNNEL ],
 	},
 	{
 		face = [ XRFaceTracker.FT_LIP_PUCKER,
-				 XRFaceTracker.FT_LIP_PUCKER_UPPER,
-				 XRFaceTracker.FT_LIP_PUCKER_LOWER ],
+				XRFaceTracker.FT_LIP_PUCKER_UPPER,
+				XRFaceTracker.FT_LIP_PUCKER_LOWER ],
 		vmc = [ FaceBlend.MOUTH_PUCKER ],
 	},
 	{
