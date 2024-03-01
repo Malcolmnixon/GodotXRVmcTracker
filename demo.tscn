@@ -1,0 +1,148 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkkew3u3hi7md"]
+
+[ext_resource type="PackedScene" uid="uid://bhc6nngwjdvum" path="res://assets/test_chan/Test-Chan.fbx" id="1_lkeve"]
+[ext_resource type="PackedScene" uid="uid://cay8oh2ll7yxi" path="res://assets/test_kun/Test-Kun.fbx" id="2_67k0v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cqqj5"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_elgeq"]
+sky_material = SubResource("ProceduralSkyMaterial_cqqj5")
+
+[sub_resource type="Environment" id="Environment_w0xf3"]
+background_mode = 2
+sky = SubResource("Sky_elgeq")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Demo" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_w0xf3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 10, 0)
+shadow_enabled = true
+
+[node name="Chan" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0)
+
+[node name="Test-Chan" parent="Chan" instance=ExtResource("1_lkeve")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Body" parent="Chan/Test-Chan/Armature/Skeleton3D" index="0"]
+blend_shapes/Cheek_Puff_Left = 1.28996e-05
+blend_shapes/Cheek_Puff_Right = 1.28996e-05
+blend_shapes/Eye_Left_Left = 0.297788
+blend_shapes/Eye_Left_Right = 0.0393999
+blend_shapes/Eye_Left_Wide = 0.0133242
+blend_shapes/Eye_Right_Blink = 0.00013511
+blend_shapes/Eye_Right_Left = 0.275447
+blend_shapes/Eye_Right_Right = 0.0277578
+blend_shapes/Eye_Right_Wide = 0.00428797
+blend_shapes/Jaw_Forward = 0.000153695
+blend_shapes/Jaw_Left = 0.00336811
+blend_shapes/Jaw_Open = 0.00751231
+blend_shapes/Jaw_Right = 2.27399e-05
+blend_shapes/Mouth_Ape_Shape = 0.00011435
+blend_shapes/Mouth_Lower_DownLeft = 0.000834321
+blend_shapes/Mouth_Lower_DownRight = 0.000420048
+blend_shapes/Mouth_Lower_Overturn = 0.000739455
+blend_shapes/Mouth_Smile_Left = 0.00125522
+blend_shapes/Mouth_Smile_Right = 0.0023025
+blend_shapes/Mouth_Upper_Overturn = 0.000739455
+blend_shapes/Mouth_Upper_UpLeft = 0.000106642
+blend_shapes/Mouth_Upper_UpRight = 0.000192762
+blend_shapes/browDownLeft = 0.15347
+blend_shapes/browDownRight = 0.309234
+blend_shapes/browOuterUpLeft = 0.0348048
+blend_shapes/browOuterUpRight = 0.00225858
+blend_shapes/eyeLookDownLeft = 0.109839
+blend_shapes/eyeLookDownRight = 0.116176
+blend_shapes/eyeLookUpLeft = 0.109527
+blend_shapes/eyeLookUpRight = 0.105932
+blend_shapes/eyeSquintLeft = 0.0409867
+blend_shapes/eyeSquintRight = 0.437591
+blend_shapes/mouthDimpleLeft = 0.00314422
+blend_shapes/mouthDimpleRight = 0.00836317
+blend_shapes/mouthFrownLeft = 0.00134124
+blend_shapes/mouthFrownRight = 0.00104317
+blend_shapes/mouthFunnel = 0.000739455
+blend_shapes/mouthPressLeft = 0.00762485
+blend_shapes/mouthPressRight = 0.0310566
+blend_shapes/mouthStretchLeft = 0.0145674
+blend_shapes/mouthStretchRight = 0.00253638
+
+[node name="XRFaceModifier3D" type="XRFaceModifier3D" parent="Chan"]
+face_tracker = &"/vmc/head"
+target = NodePath("../Test-Chan/Armature/Skeleton3D/Body")
+
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Chan"]
+body_tracker = &"/vmc/body"
+target = NodePath("../Test-Chan/Armature/Skeleton3D")
+bone_update = 1
+
+[node name="Kun" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, 0)
+
+[node name="Test-Kun" parent="Kun" instance=ExtResource("2_67k0v")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 0)
+
+[node name="Body" parent="Kun/Test-Kun/Armature/Skeleton3D" index="0"]
+blend_shapes/Cheek_Puff_Left = 1.28996e-05
+blend_shapes/Cheek_Puff_Right = 1.28996e-05
+blend_shapes/Eye_Left_Left = 0.297788
+blend_shapes/Eye_Left_Right = 0.0393999
+blend_shapes/Eye_Left_Wide = 0.0133242
+blend_shapes/Eye_Right_Blink = 0.00013511
+blend_shapes/Eye_Right_Left = 0.275447
+blend_shapes/Eye_Right_Right = 0.0277578
+blend_shapes/Eye_Right_Wide = 0.00428797
+blend_shapes/Jaw_Forward = 0.000153695
+blend_shapes/Jaw_Left = 0.00336811
+blend_shapes/Jaw_Open = 0.00751231
+blend_shapes/Jaw_Right = 2.27399e-05
+blend_shapes/Mouth_Ape_Shape = 0.00011435
+blend_shapes/Mouth_Lower_DownLeft = 0.000834321
+blend_shapes/Mouth_Lower_DownRight = 0.000420048
+blend_shapes/Mouth_Lower_Overturn = 0.000739455
+blend_shapes/Mouth_Smile_Left = 0.00125522
+blend_shapes/Mouth_Smile_Right = 0.0023025
+blend_shapes/Mouth_Upper_Overturn = 0.000739455
+blend_shapes/Mouth_Upper_UpLeft = 0.000106642
+blend_shapes/Mouth_Upper_UpRight = 0.000192762
+blend_shapes/browDownLeft = 0.15347
+blend_shapes/browDownRight = 0.309234
+blend_shapes/browOuterUpLeft = 0.0348048
+blend_shapes/browOuterUpRight = 0.00225858
+blend_shapes/eyeLookDownLeft = 0.109839
+blend_shapes/eyeLookDownRight = 0.116176
+blend_shapes/eyeLookUpLeft = 0.109527
+blend_shapes/eyeLookUpRight = 0.105932
+blend_shapes/eyeSquintLeft = 0.0409867
+blend_shapes/eyeSquintRight = 0.437591
+blend_shapes/mouthDimpleLeft = 0.00314422
+blend_shapes/mouthDimpleRight = 0.00836317
+blend_shapes/mouthFrownLeft = 0.00134124
+blend_shapes/mouthFrownRight = 0.00104317
+blend_shapes/mouthFunnel = 0.000739455
+blend_shapes/mouthPressLeft = 0.00762485
+blend_shapes/mouthPressRight = 0.0310566
+blend_shapes/mouthStretchLeft = 0.0145674
+blend_shapes/mouthStretchRight = 0.00253638
+
+[node name="XRFaceModifier3D" type="XRFaceModifier3D" parent="Kun"]
+face_tracker = &"/vmc/head"
+target = NodePath("../Test-Kun/Armature/Skeleton3D/Body")
+
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Kun"]
+body_tracker = &"/vmc/body"
+target = NodePath("../Test-Kun/Armature/Skeleton3D")
+bone_update = 1
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+
+[editable path="Chan/Test-Chan"]
+[editable path="Kun/Test-Kun"]

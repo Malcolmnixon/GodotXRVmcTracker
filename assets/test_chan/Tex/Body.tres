@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bo807f25mvb61"]
+
+[ext_resource type="Texture2D" uid="uid://c22yn0dj8v151" path="res://assets/test_chan/Tex/Body.png" id="1_bn8xm"]
+[ext_resource type="Texture2D" uid="uid://25d8edj0udpu" path="res://assets/test_chan/Tex/Body_Normal.png" id="2_nqn5g"]
+
+[resource]
+albedo_texture = ExtResource("1_bn8xm")
+normal_enabled = true
+normal_texture = ExtResource("2_nqn5g")

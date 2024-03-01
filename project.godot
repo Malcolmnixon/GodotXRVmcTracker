@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Godot XR Vmc Tracker"
+run/main_scene="res://demo.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+VmcTracker="*res://addons/godot_vmc_tracker/vmc_tracker.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_vmc_tracker/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="mobile"

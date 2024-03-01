@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://becrfi58gfme"]
+
+[ext_resource type="Texture2D" uid="uid://blsgfxyc8usnv" path="res://assets/test_chan/Tex/Shirt.png" id="1_krili"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+depth_draw_mode = 1
+albedo_texture = ExtResource("1_krili")
