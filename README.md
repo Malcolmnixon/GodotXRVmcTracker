@@ -7,7 +7,7 @@
 
 This repository contains a VMC-protocol decoder for Godot that can drive avatars through the XR Tracker system.
 
-[<img src="docs/Screenshot 2024-03-02 at 09-54-40 Godot VRM Avatars.png">]([http://google.com.au/](https://www.youtube.com/watch?v=eE0UGosv7ek "Godot VRM Avatars"))
+[<img src="docs/Screenshot 2024-03-02 at 09-54-40 Godot VRM Avatars.png">](https://www.youtube.com/watch?v=eE0UGosv7ek "Godot VRM Avatars")
 
 ## Versions
 
