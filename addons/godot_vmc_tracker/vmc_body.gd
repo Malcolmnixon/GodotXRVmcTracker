@@ -299,278 +299,268 @@ const JOINT_MAPPING : Array[Dictionary] = [
 	# Upper Body Joints
 	{
 		body = XRBodyTracker.JOINT_HIPS,
-		vmc = Joint.HIPS,
+		native = Joint.HIPS,
 		roll = Quaternion(0.0, 1.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_SPINE,
-		vmc = Joint.SPINE,
+		native = Joint.SPINE,
 		roll = Quaternion(0.0, 1.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_CHEST,
-		vmc = Joint.CHEST,
+		native = Joint.CHEST,
 		roll = Quaternion(0.0, 1.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_UPPER_CHEST,
-		vmc = Joint.UPPER_CHEST,
+		native = Joint.UPPER_CHEST,
 		roll = Quaternion(0.0, 1.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_NECK,
-		vmc = Joint.NECK,
+		native = Joint.NECK,
 		roll = Quaternion(0.0, 1.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_HEAD,
-		vmc = Joint.HEAD,
+		native = Joint.HEAD,
 		roll = Quaternion(0.0, 1.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_SHOULDER,
-		vmc = Joint.LEFT_SHOULDER,
+		native = Joint.LEFT_SHOULDER,
 		roll = Quaternion(-0.5, 0.5, 0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_UPPER_ARM,
-		vmc = Joint.LEFT_UPPER_ARM,
+		native = Joint.LEFT_UPPER_ARM,
 		roll = Quaternion(0.5, -0.5, 0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_LOWER_ARM,
-		vmc = Joint.LEFT_LOWER_ARM,
+		native = Joint.LEFT_LOWER_ARM,
 		roll = Quaternion(-0.7071068, 0.7071068, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_SHOULDER,
-		vmc = Joint.RIGHT_SHOULDER,
+		native = Joint.RIGHT_SHOULDER,
 		roll = Quaternion(0.5, 0.5, 0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_UPPER_ARM,
-		vmc = Joint.RIGHT_UPPER_ARM,
+		native = Joint.RIGHT_UPPER_ARM,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_LOWER_ARM,
-		vmc = Joint.RIGHT_LOWER_ARM,
+		native = Joint.RIGHT_LOWER_ARM,
 		roll = Quaternion(0.7071068, 0.7071068, 0.0, 0.0)
 	},
 
 	# Lower Body Joints
 	{
 		body = XRBodyTracker.JOINT_LEFT_UPPER_LEG,
-		vmc = Joint.LEFT_UPPER_LEG,
+		native = Joint.LEFT_UPPER_LEG,
 		roll = Quaternion(1.0, 0.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_LOWER_LEG,
-		vmc = Joint.LEFT_LOWER_LEG,
+		native = Joint.LEFT_LOWER_LEG,
 		roll = Quaternion(0.0, 0.0, 1.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_FOOT,
-		vmc = Joint.LEFT_FOOT,
+		native = Joint.LEFT_FOOT,
 		roll = Quaternion(-0.7071068, 0.0, 0.0, 0.7071068)
 	},
-	#{
-	#	body = XRBodyTracker.JOINT_LEFT_TOES,
-	#	vmc = Joint.LEFT_TOES,
-	#	roll = Quaternion(-0.7071068, 0.0, 0.0, 0.7071068)
-	#},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_UPPER_LEG,
-		vmc = Joint.RIGHT_UPPER_LEG,
+		native = Joint.RIGHT_UPPER_LEG,
 		roll = Quaternion(1.0, 0.0, 0.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_LOWER_LEG,
-		vmc = Joint.RIGHT_LOWER_LEG,
+		native = Joint.RIGHT_LOWER_LEG,
 		roll = Quaternion(0.0, 0.0, 1.0, 0.0)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_FOOT,
-		vmc = Joint.RIGHT_FOOT,
+		native = Joint.RIGHT_FOOT,
 		roll = Quaternion(-0.7071068, 0.0, 0.0, 0.7071068)
 	},
-	#{
-	#	body = XRBodyTracker.JOINT_RIGHT_TOES,
-	#	vmc = Joint.RIGHT_TOES,
-	#	roll = Quaternion(-0.7071068, 0.0, 0.0, 0.7071068)
-	#},
 
 	# Left Hand Joints
 	{
 		body = XRBodyTracker.JOINT_LEFT_HAND,
-		vmc = Joint.LEFT_HAND,
+		native = Joint.LEFT_HAND,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_WRIST,
-		vmc = Joint.LEFT_HAND,
+		native = Joint.LEFT_HAND,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_THUMB_METACARPAL,
-		vmc = Joint.LEFT_THUMB_PROXIMAL,
+		native = Joint.LEFT_THUMB_PROXIMAL,
 		roll = Quaternion(0.3535534, -0.6123724, 0.6123724, 0.3535534)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_THUMB_PHALANX_PROXIMAL,
-		vmc = Joint.LEFT_THUMB_INTERMEDIATE,
+		native = Joint.LEFT_THUMB_INTERMEDIATE,
 		roll = Quaternion(0.3535534, -0.6123724, 0.6123724, 0.3535534)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_THUMB_PHALANX_DISTAL,
-		vmc = Joint.LEFT_THUMB_DISTAL,
+		native = Joint.LEFT_THUMB_DISTAL,
 		roll = Quaternion(0.3535534, -0.6123724, 0.6123724, 0.3535534)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_INDEX_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.LEFT_INDEX_PROXIMAL,
+		native = Joint.LEFT_INDEX_PROXIMAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_INDEX_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.LEFT_INDEX_INTERMEDIATE,
+		native = Joint.LEFT_INDEX_INTERMEDIATE,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_INDEX_FINGER_PHALANX_DISTAL,
-		vmc = Joint.LEFT_INDEX_DISTAL,
+		native = Joint.LEFT_INDEX_DISTAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_MIDDLE_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.LEFT_MIDDLE_PROXIMAL,
+		native = Joint.LEFT_MIDDLE_PROXIMAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_MIDDLE_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.LEFT_MIDDLE_INTERMEDIATE,
+		native = Joint.LEFT_MIDDLE_INTERMEDIATE,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_MIDDLE_FINGER_PHALANX_DISTAL,
-		vmc = Joint.LEFT_MIDDLE_DISTAL,
+		native = Joint.LEFT_MIDDLE_DISTAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_RING_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.LEFT_RING_PROXIMAL,
+		native = Joint.LEFT_RING_PROXIMAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_RING_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.LEFT_RING_INTERMEDIATE,
+		native = Joint.LEFT_RING_INTERMEDIATE,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_RING_FINGER_PHALANX_DISTAL,
-		vmc = Joint.LEFT_RING_DISTAL,
+		native = Joint.LEFT_RING_DISTAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_PINKY_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.LEFT_LITTLE_PROXIMAL,
+		native = Joint.LEFT_LITTLE_PROXIMAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_PINKY_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.LEFT_LITTLE_INTERMEDIATE,
+		native = Joint.LEFT_LITTLE_INTERMEDIATE,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_LEFT_PINKY_FINGER_PHALANX_DISTAL,
-		vmc = Joint.LEFT_LITTLE_DISTAL,
+		native = Joint.LEFT_LITTLE_DISTAL,
 		roll = Quaternion(-0.5, 0.5, -0.5, -0.5)
 	},
 
 	# Right Hand Joints
 	{
 		body = XRBodyTracker.JOINT_RIGHT_HAND,
-		vmc = Joint.RIGHT_HAND,
+		native = Joint.RIGHT_HAND,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_WRIST,
-		vmc = Joint.RIGHT_HAND,
+		native = Joint.RIGHT_HAND,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_THUMB_METACARPAL,
-		vmc = Joint.RIGHT_THUMB_PROXIMAL,
+		native = Joint.RIGHT_THUMB_PROXIMAL,
 		roll = Quaternion(0.3535534, 0.6123724, -0.6123724, 0.3535534)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_THUMB_PHALANX_PROXIMAL,
-		vmc = Joint.RIGHT_THUMB_INTERMEDIATE,
+		native = Joint.RIGHT_THUMB_INTERMEDIATE,
 		roll = Quaternion(0.3535534, 0.6123724, -0.6123724, 0.3535534)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_THUMB_PHALANX_DISTAL,
-		vmc = Joint.RIGHT_THUMB_DISTAL,
+		native = Joint.RIGHT_THUMB_DISTAL,
 		roll = Quaternion(0.3535534, 0.6123724, -0.6123724, 0.3535534)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_INDEX_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.RIGHT_INDEX_PROXIMAL,
+		native = Joint.RIGHT_INDEX_PROXIMAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_INDEX_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.RIGHT_INDEX_INTERMEDIATE,
+		native = Joint.RIGHT_INDEX_INTERMEDIATE,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_INDEX_FINGER_PHALANX_DISTAL,
-		vmc = Joint.RIGHT_INDEX_DISTAL,
+		native = Joint.RIGHT_INDEX_DISTAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_MIDDLE_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.RIGHT_MIDDLE_PROXIMAL,
+		native = Joint.RIGHT_MIDDLE_PROXIMAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_MIDDLE_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.RIGHT_MIDDLE_INTERMEDIATE,
+		native = Joint.RIGHT_MIDDLE_INTERMEDIATE,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_MIDDLE_FINGER_PHALANX_DISTAL,
-		vmc = Joint.RIGHT_MIDDLE_DISTAL,
+		native = Joint.RIGHT_MIDDLE_DISTAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_RING_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.RIGHT_RING_PROXIMAL,
+		native = Joint.RIGHT_RING_PROXIMAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_RING_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.RIGHT_RING_INTERMEDIATE,
+		native = Joint.RIGHT_RING_INTERMEDIATE,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_RING_FINGER_PHALANX_DISTAL,
-		vmc = Joint.RIGHT_RING_DISTAL,
+		native = Joint.RIGHT_RING_DISTAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_PINKY_FINGER_PHALANX_PROXIMAL,
-		vmc = Joint.RIGHT_LITTLE_PROXIMAL,
+		native = Joint.RIGHT_LITTLE_PROXIMAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_PINKY_FINGER_PHALANX_INTERMEDIATE,
-		vmc = Joint.RIGHT_LITTLE_INTERMEDIATE,
+		native = Joint.RIGHT_LITTLE_INTERMEDIATE,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 	{
 		body = XRBodyTracker.JOINT_RIGHT_PINKY_FINGER_PHALANX_DISTAL,
-		vmc = Joint.RIGHT_LITTLE_DISTAL,
+		native = Joint.RIGHT_LITTLE_DISTAL,
 		roll = Quaternion(0.5, 0.5, -0.5, 0.5)
 	},
 ]
@@ -580,244 +570,244 @@ const FACE_BLEND_MAPPING : Array[Dictionary] = [
 	# Upper Body Joints
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_OUT_RIGHT ],
-		vmc = [ FaceBlend.EYE_LOOK_OUT_RIGHT ],
+		native = [ FaceBlend.EYE_LOOK_OUT_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_IN_RIGHT ],
-		vmc = [ FaceBlend.EYE_LOOK_IN_RIGHT ],
+		native = [ FaceBlend.EYE_LOOK_IN_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_UP_RIGHT ],
-		vmc = [ FaceBlend.EYE_LOOK_UP_RIGHT ],
+		native = [ FaceBlend.EYE_LOOK_UP_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_DOWN_RIGHT ],
-		vmc = [ FaceBlend.EYE_LOOK_DOWN_RIGHT ],
+		native = [ FaceBlend.EYE_LOOK_DOWN_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_OUT_LEFT ],
-		vmc = [ FaceBlend.EYE_LOOK_OUT_LEFT ],
+		native = [ FaceBlend.EYE_LOOK_OUT_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_IN_LEFT ],
-		vmc = [ FaceBlend.EYE_LOOK_IN_LEFT ],
+		native = [ FaceBlend.EYE_LOOK_IN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_UP_LEFT ],
-		vmc = [ FaceBlend.EYE_LOOK_UP_LEFT ],
+		native = [ FaceBlend.EYE_LOOK_UP_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_LOOK_DOWN_LEFT ],
-		vmc = [ FaceBlend.EYE_LOOK_DOWN_LEFT ],
+		native = [ FaceBlend.EYE_LOOK_DOWN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_CLOSED_RIGHT ],
-		vmc = [ FaceBlend.EYE_BLINK_RIGHT ],
+		native = [ FaceBlend.EYE_BLINK_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_CLOSED_LEFT ],
-		vmc = [ FaceBlend.EYE_BLINK_LEFT ],
+		native = [ FaceBlend.EYE_BLINK_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_CLOSED ],
-		vmc = [ FaceBlend.EYE_BLINK_RIGHT,
+		native = [ FaceBlend.EYE_BLINK_RIGHT,
 				FaceBlend.EYE_BLINK_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_SQUINT_RIGHT ],
-		vmc = [ FaceBlend.EYE_SQUINT_RIGHT ],
+		native = [ FaceBlend.EYE_SQUINT_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_SQUINT_LEFT ],
-		vmc = [ FaceBlend.EYE_SQUINT_LEFT ],
+		native = [ FaceBlend.EYE_SQUINT_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_SQUINT ],
-		vmc = [ FaceBlend.EYE_SQUINT_RIGHT,
+		native = [ FaceBlend.EYE_SQUINT_RIGHT,
 				FaceBlend.EYE_SQUINT_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_WIDE_RIGHT ],
-		vmc = [ FaceBlend.EYE_WIDE_RIGHT ],
+		native = [ FaceBlend.EYE_WIDE_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_WIDE_LEFT ],
-		vmc = [ FaceBlend.EYE_WIDE_LEFT ],
+		native = [ FaceBlend.EYE_WIDE_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_EYE_WIDE ],
-		vmc = [ FaceBlend.EYE_WIDE_RIGHT,
+		native = [ FaceBlend.EYE_WIDE_RIGHT,
 				FaceBlend.EYE_WIDE_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_BROW_DOWN_RIGHT ],
-		vmc = [ FaceBlend.BROW_DOWN_RIGHT ],
+		native = [ FaceBlend.BROW_DOWN_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_BROW_DOWN_LEFT ],
-		vmc = [ FaceBlend.BROW_DOWN_LEFT ],
+		native = [ FaceBlend.BROW_DOWN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_BROW_DOWN ],
-		vmc = [ FaceBlend.BROW_DOWN_RIGHT,
+		native = [ FaceBlend.BROW_DOWN_RIGHT,
 				FaceBlend.BROW_DOWN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_BROW_OUTER_UP_RIGHT ],
-		vmc = [ FaceBlend.BROW_OUTER_UP_RIGHT ],
+		native = [ FaceBlend.BROW_OUTER_UP_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_BROW_OUTER_UP_LEFT ],
-		vmc = [ FaceBlend.BROW_OUTER_UP_LEFT ],
+		native = [ FaceBlend.BROW_OUTER_UP_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_NOSE_SNEER_RIGHT ],
-		vmc = [ FaceBlend.NOSE_SNEER_RIGHT ],
+		native = [ FaceBlend.NOSE_SNEER_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_NOSE_SNEER_LEFT ],
-		vmc = [ FaceBlend.NOSE_SNEER_LEFT ],
+		native = [ FaceBlend.NOSE_SNEER_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_NOSE_SNEER ],
-		vmc = [ FaceBlend.NOSE_SNEER_RIGHT,
+		native = [ FaceBlend.NOSE_SNEER_RIGHT,
 				FaceBlend.NOSE_SNEER_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_CHEEK_SQUINT_RIGHT ],
-		vmc = [ FaceBlend.CHEEK_SQUINT_RIGHT ],
+		native = [ FaceBlend.CHEEK_SQUINT_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_CHEEK_SQUINT_LEFT ],
-		vmc = [ FaceBlend.CHEEK_SQUINT_LEFT ],
+		native = [ FaceBlend.CHEEK_SQUINT_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_CHEEK_SQUINT ],
-		vmc = [ FaceBlend.CHEEK_SQUINT_RIGHT,
+		native = [ FaceBlend.CHEEK_SQUINT_RIGHT,
 				FaceBlend.CHEEK_SQUINT_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_CHEEK_PUFF,
 				XRFaceTracker.FT_CHEEK_PUFF_RIGHT,
 				XRFaceTracker.FT_CHEEK_PUFF_LEFT ],
-		vmc = [ FaceBlend.CHEEK_PUFF ],
+		native = [ FaceBlend.CHEEK_PUFF ],
 	},
 	{
 		face = [ XRFaceTracker.FT_JAW_OPEN ],
-		vmc = [ FaceBlend.JAW_OPEN ],
+		native = [ FaceBlend.JAW_OPEN ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_CLOSED ],
-		vmc = [ FaceBlend.MOUTH_CLOSE ],
+		native = [ FaceBlend.MOUTH_CLOSE ],
 	},
 	{
 		face = [ XRFaceTracker.FT_JAW_RIGHT ],
-		vmc = [ FaceBlend.JAW_RIGHT ],
+		native = [ FaceBlend.JAW_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_JAW_LEFT ],
-		vmc = [ FaceBlend.JAW_LEFT ],
+		native = [ FaceBlend.JAW_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_JAW_FORWARD ],
-		vmc = [ FaceBlend.JAW_FORWARD ],
+		native = [ FaceBlend.JAW_FORWARD ],
 	},
 	{
 		face = [ XRFaceTracker.FT_LIP_FUNNEL,
 				XRFaceTracker.FT_LIP_FUNNEL_UPPER,
 				XRFaceTracker.FT_LIP_FUNNEL_LOWER ],
-		vmc = [ FaceBlend.MOUTH_FUNNEL ],
+		native = [ FaceBlend.MOUTH_FUNNEL ],
 	},
 	{
 		face = [ XRFaceTracker.FT_LIP_PUCKER,
 				XRFaceTracker.FT_LIP_PUCKER_UPPER,
 				XRFaceTracker.FT_LIP_PUCKER_LOWER ],
-		vmc = [ FaceBlend.MOUTH_PUCKER ],
+		native = [ FaceBlend.MOUTH_PUCKER ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_UPPER_UP_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_UPPER_UP_RIGHT ],
+		native = [ FaceBlend.MOUTH_UPPER_UP_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_UPPER_UP_LEFT ],
-		vmc = [ FaceBlend.MOUTH_UPPER_UP_LEFT ],
+		native = [ FaceBlend.MOUTH_UPPER_UP_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_UPPER_UP ],
-		vmc = [ FaceBlend.MOUTH_UPPER_UP_RIGHT,
+		native = [ FaceBlend.MOUTH_UPPER_UP_RIGHT,
 				FaceBlend.MOUTH_UPPER_UP_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_LOWER_DOWN_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_LOWER_DOWN_RIGHT ],
+		native = [ FaceBlend.MOUTH_LOWER_DOWN_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_LOWER_DOWN_LEFT ],
-		vmc = [ FaceBlend.MOUTH_LOWER_DOWN_LEFT ],
+		native = [ FaceBlend.MOUTH_LOWER_DOWN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_LOWER_DOWN ],
-		vmc = [ FaceBlend.MOUTH_LOWER_DOWN_RIGHT,
+		native = [ FaceBlend.MOUTH_LOWER_DOWN_RIGHT,
 				FaceBlend.MOUTH_LOWER_DOWN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_SMILE_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_SMILE_RIGHT ],
+		native = [ FaceBlend.MOUTH_SMILE_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_SMILE_LEFT ],
-		vmc = [ FaceBlend.MOUTH_SMILE_LEFT ],
+		native = [ FaceBlend.MOUTH_SMILE_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_SMILE ],
-		vmc = [ FaceBlend.MOUTH_SMILE_RIGHT,
+		native = [ FaceBlend.MOUTH_SMILE_RIGHT,
 				FaceBlend.MOUTH_SMILE_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_FROWN_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_FROWN_RIGHT ],
+		native = [ FaceBlend.MOUTH_FROWN_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_FROWN_LEFT ],
-		vmc = [ FaceBlend.MOUTH_FROWN_LEFT ],
+		native = [ FaceBlend.MOUTH_FROWN_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_STRETCH_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_STRETCH_RIGHT ],
+		native = [ FaceBlend.MOUTH_STRETCH_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_STRETCH_LEFT ],
-		vmc = [ FaceBlend.MOUTH_STRETCH_LEFT ],
+		native = [ FaceBlend.MOUTH_STRETCH_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_STRETCH ],
-		vmc = [ FaceBlend.MOUTH_STRETCH_RIGHT,
+		native = [ FaceBlend.MOUTH_STRETCH_RIGHT,
 				FaceBlend.MOUTH_STRETCH_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_DIMPLE_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_DIMPLE_RIGHT ],
+		native = [ FaceBlend.MOUTH_DIMPLE_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_DIMPLE_LEFT ],
-		vmc = [ FaceBlend.MOUTH_DIMPLE_LEFT ],
+		native = [ FaceBlend.MOUTH_DIMPLE_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_DIMPLE ],
-		vmc = [ FaceBlend.MOUTH_DIMPLE_RIGHT,
+		native = [ FaceBlend.MOUTH_DIMPLE_RIGHT,
 				FaceBlend.MOUTH_DIMPLE_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_PRESS_RIGHT ],
-		vmc = [ FaceBlend.MOUTH_PRESS_RIGHT ],
+		native = [ FaceBlend.MOUTH_PRESS_RIGHT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_PRESS_LEFT ],
-		vmc = [ FaceBlend.MOUTH_PRESS_LEFT ],
+		native = [ FaceBlend.MOUTH_PRESS_LEFT ],
 	},
 	{
 		face = [ XRFaceTracker.FT_MOUTH_PRESS ],
-		vmc = [ FaceBlend.MOUTH_PRESS_RIGHT,
+		native = [ FaceBlend.MOUTH_PRESS_RIGHT,
 				FaceBlend.MOUTH_PRESS_LEFT ],
 	},
 ]

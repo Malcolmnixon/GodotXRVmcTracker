@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: demo/godot_vmc_tracker
-      - name: Create Godor VMC Tracker plugin
+      - name: Create Godot VMC Tracker plugin
         run: |
           mkdir plugin
           mkdir plugin/godot_vmc_tracker

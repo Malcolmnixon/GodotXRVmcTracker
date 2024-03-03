@@ -50,7 +50,7 @@ func _enter_tree():
 			TYPE_INT,
 			PROPERTY_HINT_ENUM,
 			"Free,Calibrate,Locked",
-			"/vmc/body")
+			0)
 
 	# Add network port
 	_define_project_setting(
