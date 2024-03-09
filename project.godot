@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-VmcTracker="*res://addons/godot_vmc_tracker/vmc_tracker.gd"
+VmcPlugin="*res://addons/godot_vmc_tracker/vmc_plugin.gd"
 
 [editor_plugins]
 

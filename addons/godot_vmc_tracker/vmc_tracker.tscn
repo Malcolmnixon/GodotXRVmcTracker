@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvnmxtkucajqw"]
+
+[ext_resource type="Script" path="res://addons/godot_vmc_tracker/vmc_tracker.gd" id="1_w1cjd"]
+
+[node name="VmcTracker" type="Node"]
+script = ExtResource("1_w1cjd")

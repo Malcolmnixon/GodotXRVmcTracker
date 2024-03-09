@@ -62,8 +62,8 @@ func _enter_tree():
 
 	# Register our autoload user settings object
 	add_autoload_singleton(
-			"VmcTracker",
-			"res://addons/godot_vmc_tracker/vmc_tracker.gd")
+			"VmcPlugin",
+			"res://addons/godot_vmc_tracker/vmc_plugin.gd")
 
 
 func _exit_tree():
