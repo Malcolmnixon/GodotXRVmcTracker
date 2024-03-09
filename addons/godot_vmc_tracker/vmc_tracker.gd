@@ -10,10 +10,10 @@ extends Node
 
 
 ## Face tracker name
-@export var face_tracker_name : String = "/mvn/head"
+@export var face_tracker_name : String = "/vmc/head"
 
 ## Body tracker name
-@export var body_tracker_name : String = "/mvn/body"
+@export var body_tracker_name : String = "/vmc/body"
 
 ## Position mode
 @export_enum("Free", "Calibrate", "Locked") var position_mode : int = 0
