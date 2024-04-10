@@ -51,5 +51,6 @@ func _on_skeleton_spin_box_value_changed(value: float) -> void:
 	%"Test-Kun/Armature/Skeleton3D".motion_scale = value
 
 
-func _on_world_spin_box_value_changed(value: float) -> void:
-	XRServer.world_scale = value
+func _on_avatar_spin_box_value_changed(value: float) -> void:
+	$"Chan".scale = Vector3(value, value, value)
+	$"Kun".scale = Vector3(value, value, value)
