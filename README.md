@@ -16,7 +16,9 @@ Official releases are tagged and can be found [here](https://github.com/Malcolmn
 The following branches are in active development:
 |  Branch   |  Description                  |  Godot version   |
 |-----------|-------------------------------|------------------|
-|  master   | Current development branch    |  Godot 4.3-dev4+ |
+|  master   | Current development branch    |  Godot 4.3-dev6+ |
+
+<sub>NOTE: This requires the [XR Trackers](https://github.com/godotengine/godot/pull/90645) PR which is in the Godot master branch, but no release has been made.</sub>
 
 ## Overview
 
@@ -54,7 +56,11 @@ The character model must be in Godot Humanoid format. This can be achieved in th
 
 ### Body Driving
 
-The body is driven using an [XRBodyModifier3D](https://docs.godotengine.org/en/latest/classes/class_xrbodymodifier3d.html) node configured to drive the skeleton of the character:
+The body is positioned using an [XRNode3D](https://docs.godotengine.org/en/latest/classes/class_xrnode3d.html) node configured to track the character body:
+
+![XRNode3D](/docs/xrnode3d.png)
+
+The body is posed using an [XRBodyModifier3D](https://docs.godotengine.org/en/latest/classes/class_xrbodymodifier3d.html) node skeleton modifier:
 
 ![XRBodyModifier3D](/docs/xrbodymodifier3d.png)
 

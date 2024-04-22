@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkkew3u3hi7md"]
+[gd_scene load_steps=14 format=4 uid="uid://dkkew3u3hi7md"]
 
 [ext_resource type="Script" path="res://demo.gd" id="1_7k4ei"]
 [ext_resource type="PackedScene" uid="uid://bhc6nngwjdvum" path="res://assets/test_chan/Test-Chan.fbx" id="1_lkeve"]
@@ -65,18 +65,12 @@ transform = Transform3D(0.939693, 0.0593911, -0.336824, 0, 0.984808, 0.173648, 0
 [node name="Chan" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.6, 0, 0)
 
-[node name="XRFaceModifier3D" type="XRFaceModifier3D" parent="Chan"]
-face_tracker = &"/vmc/head"
-target = NodePath("../XRBodyModifier3D/Test-Chan/Armature/Skeleton3D/Body")
+[node name="ChanAvatar" type="XRNode3D" parent="Chan"]
+tracker = &"/vmc/body_tracker"
 
-[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Chan"]
-body_tracker = &"/vmc/body"
-target = NodePath("Test-Chan/Armature/Skeleton3D")
+[node name="Test-Chan" parent="Chan/ChanAvatar" instance=ExtResource("1_lkeve")]
 
-[node name="Test-Chan" parent="Chan/XRBodyModifier3D" instance=ExtResource("1_lkeve")]
-unique_name_in_owner = true
-
-[node name="Body" parent="Chan/XRBodyModifier3D/Test-Chan/Armature/Skeleton3D" index="0"]
+[node name="Body" parent="Chan/ChanAvatar/Test-Chan/Armature/Skeleton3D" index="0"]
 blend_shapes/Cheek_Puff_Left = 1.28996e-05
 blend_shapes/Cheek_Puff_Right = 1.28996e-05
 blend_shapes/Eye_Left_Left = 0.297788
@@ -119,30 +113,31 @@ blend_shapes/mouthPressRight = 0.0310566
 blend_shapes/mouthStretchLeft = 0.0145674
 blend_shapes/mouthStretchRight = 0.00253638
 
-[node name="GroundRing" type="MeshInstance3D" parent="Chan/XRBodyModifier3D"]
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Chan/ChanAvatar/Test-Chan/Armature/Skeleton3D" index="2"]
+body_tracker = &"/vmc/body_tracker"
+
+[node name="XRFaceModifier3D" type="XRFaceModifier3D" parent="Chan/ChanAvatar"]
+face_tracker = &"/vmc/face_tracker"
+target = NodePath("../Test-Chan/Armature/Skeleton3D/Body")
+
+[node name="GroundRing" type="MeshInstance3D" parent="Chan/ChanAvatar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 mesh = SubResource("TorusMesh_rbtmk")
 skeleton = NodePath("")
 
-[node name="Forward" type="MeshInstance3D" parent="Chan/XRBodyModifier3D/GroundRing"]
+[node name="Forward" type="MeshInstance3D" parent="Chan/ChanAvatar/GroundRing"]
 transform = Transform3D(1, -8.74228e-08, -8.74228e-08, 8.74228e-08, -4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -5.96046e-08, 0, -0.6)
 mesh = SubResource("SphereMesh_t4i7x")
 
 [node name="Kun" type="Node3D" parent="."]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.6, 0, 0)
 
-[node name="XRFaceModifier3D" type="XRFaceModifier3D" parent="Kun"]
-face_tracker = &"/vmc/head"
-target = NodePath("../XRBodyModifier3D/Test-Kun/Armature/Skeleton3D/Body")
+[node name="KunAvatar" type="XRNode3D" parent="Kun"]
+tracker = &"/vmc/body_tracker"
 
-[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Kun"]
-body_tracker = &"/vmc/body"
-target = NodePath("Test-Kun/Armature/Skeleton3D")
+[node name="Test-Kun" parent="Kun/KunAvatar" instance=ExtResource("2_67k0v")]
 
-[node name="Test-Kun" parent="Kun/XRBodyModifier3D" instance=ExtResource("2_67k0v")]
-unique_name_in_owner = true
-
-[node name="Body" parent="Kun/XRBodyModifier3D/Test-Kun/Armature/Skeleton3D" index="0"]
+[node name="Body" parent="Kun/KunAvatar/Test-Kun/Armature/Skeleton3D" index="0"]
 blend_shapes/Cheek_Puff_Left = 1.28996e-05
 blend_shapes/Cheek_Puff_Right = 1.28996e-05
 blend_shapes/Eye_Left_Left = 0.297788
@@ -185,12 +180,19 @@ blend_shapes/mouthPressRight = 0.0310566
 blend_shapes/mouthStretchLeft = 0.0145674
 blend_shapes/mouthStretchRight = 0.00253638
 
-[node name="GroundRing" type="MeshInstance3D" parent="Kun/XRBodyModifier3D"]
+[node name="XRBodyModifier3D" type="XRBodyModifier3D" parent="Kun/KunAvatar/Test-Kun/Armature/Skeleton3D" index="2"]
+body_tracker = &"/vmc/body_tracker"
+
+[node name="XRFaceModifier3D" type="XRFaceModifier3D" parent="Kun/KunAvatar"]
+face_tracker = &"/vmc/face_tracker"
+target = NodePath("../Test-Kun/Armature/Skeleton3D/Body")
+
+[node name="GroundRing" type="MeshInstance3D" parent="Kun/KunAvatar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 mesh = SubResource("TorusMesh_rbtmk")
 skeleton = NodePath("")
 
-[node name="Forward" type="MeshInstance3D" parent="Kun/XRBodyModifier3D/GroundRing"]
+[node name="Forward" type="MeshInstance3D" parent="Kun/KunAvatar/GroundRing"]
 transform = Transform3D(1, -8.74228e-08, -8.74228e-08, 8.74228e-08, -4.37114e-08, 1, -8.74228e-08, -1, -4.37114e-08, -5.96046e-08, 0, -0.6)
 mesh = SubResource("SphereMesh_t4i7x")
 
@@ -262,5 +264,5 @@ value = 1.0
 [connection signal="value_changed" from="PanelContainer/MarginContainer/HBoxContainer/GridContainer/SkeletonSpinBox" to="." method="_on_skeleton_spin_box_value_changed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/HBoxContainer/GridContainer/WorldSpinBox" to="." method="_on_world_spin_box_value_changed"]
 
-[editable path="Chan/XRBodyModifier3D/Test-Chan"]
-[editable path="Kun/XRBodyModifier3D/Test-Kun"]
+[editable path="Chan/ChanAvatar/Test-Chan"]
+[editable path="Kun/KunAvatar/Test-Kun"]

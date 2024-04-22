@@ -16,12 +16,12 @@ func _enter_tree() -> void:
 	# Get the face tracker name
 	var face_tracker_name : String = ProjectSettings.get_setting(
 		"godot_vmc_tracker/tracking/face_tracker_name",
-		"/vmc/head")
+		"/vmc/face_tracker")
 
 	# Get the body tracker name
 	var body_tracker_name : String = ProjectSettings.get_setting(
 		"godot_vmc_tracker/tracking/body_tracker_name",
-		"/vmc/body")
+		"/vmc/body_tracker")
 
 	# Get the position mode
 	var position_mode = ProjectSettings.get_setting(

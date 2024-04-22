@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvnmxtkucajqw"]
+[gd_scene load_steps=2 format=4 uid="uid://dvnmxtkucajqw"]
 
 [ext_resource type="Script" path="res://addons/godot_vmc_tracker/vmc_tracker.gd" id="1_w1cjd"]
 

@@ -34,7 +34,7 @@ func _enter_tree():
 			TYPE_STRING,
 			PROPERTY_HINT_NONE,
 			"",
-			"/vmc/head")
+			"/vmc/face_tracker")
 
 	# Add body tracker name
 	_define_project_setting(
@@ -42,7 +42,7 @@ func _enter_tree():
 			TYPE_STRING,
 			PROPERTY_HINT_NONE,
 			"",
-			"/vmc/body")
+			"/vmc/body_tracker")
 
 	# Add position mode
 	_define_project_setting(

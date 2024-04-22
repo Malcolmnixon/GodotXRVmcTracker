@@ -47,8 +47,8 @@ func _input(event : InputEvent) -> void:
 
 
 func _on_skeleton_spin_box_value_changed(value: float) -> void:
-	%"Test-Chan/Armature/Skeleton3D".motion_scale = value
-	%"Test-Kun/Armature/Skeleton3D".motion_scale = value
+	$"Chan/ChanAvatar/Test-Chan/Armature/Skeleton3D".motion_scale = value
+	$"Kun/KunAvatar/Test-Kun/Armature/Skeleton3D".motion_scale = value
 
 
 func _on_world_spin_box_value_changed(value: float) -> void:
