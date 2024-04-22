@@ -93,10 +93,12 @@ func _init(
 	_face_blends.fill(0.0)
 
 	# Register the face tracker
-	XRServer.add_face_tracker(face_tracker_name, _face_tracker)
+	_face_tracker.name = face_tracker_name
+	XRServer.add_tracker(_face_tracker)
 
 	# Register the body tracker
-	XRServer.add_body_tracker(body_tracker_name, _body_tracker)
+	_body_tracker.name = body_tracker_name
+	XRServer.add_tracker(_body_tracker)
 
 	# Save the position mode
 	_position_mode = position_mode
@@ -225,6 +227,7 @@ func _process_joints() -> void:
 	var root := Transform3D(root_x, root_y, root_z, root_o).orthonormalized()
 	_body_tracker.set_joint_transform(XRBodyTracker.JOINT_ROOT, root)
 	_body_tracker.set_joint_flags(XRBodyTracker.JOINT_ROOT, JOINT_TRACKING)
+	_body_tracker.set_pose("default", root, Vector3.ZERO, Vector3.ZERO, XRPose.XR_TRACKING_CONFIDENCE_HIGH);
 
 	# Indicate we are tracking the body
 	_body_tracker.body_flags = BODY_TRACKING
