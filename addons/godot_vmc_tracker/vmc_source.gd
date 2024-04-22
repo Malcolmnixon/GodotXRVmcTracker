@@ -227,7 +227,12 @@ func _process_joints() -> void:
 	var root := Transform3D(root_x, root_y, root_z, root_o).orthonormalized()
 	_body_tracker.set_joint_transform(XRBodyTracker.JOINT_ROOT, root)
 	_body_tracker.set_joint_flags(XRBodyTracker.JOINT_ROOT, JOINT_TRACKING)
-	_body_tracker.set_pose("default", root, Vector3.ZERO, Vector3.ZERO, XRPose.XR_TRACKING_CONFIDENCE_HIGH);
+	_body_tracker.set_pose(
+		"default",
+		root,
+		Vector3.ZERO,
+		Vector3.ZERO,
+		XRPose.XR_TRACKING_CONFIDENCE_HIGH);
 
 	# Indicate we are tracking the body
 	_body_tracker.body_flags = BODY_TRACKING

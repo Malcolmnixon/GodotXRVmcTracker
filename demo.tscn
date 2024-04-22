@@ -69,7 +69,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.6, 
 tracker = &"/vmc/body_tracker"
 
 [node name="Test-Chan" parent="Chan/ChanAvatar" instance=ExtResource("1_lkeve")]
-unique_name_in_owner = true
 
 [node name="Body" parent="Chan/ChanAvatar/Test-Chan/Armature/Skeleton3D" index="0"]
 blend_shapes/Cheek_Puff_Left = 1.28996e-05
@@ -137,7 +136,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.6, 0
 tracker = &"/vmc/body_tracker"
 
 [node name="Test-Kun" parent="Kun/KunAvatar" instance=ExtResource("2_67k0v")]
-unique_name_in_owner = true
 
 [node name="Body" parent="Kun/KunAvatar/Test-Kun/Armature/Skeleton3D" index="0"]
 blend_shapes/Cheek_Puff_Left = 1.28996e-05
