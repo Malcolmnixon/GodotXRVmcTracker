@@ -21,7 +21,7 @@ The following branches are in active development:
 
 ## Overview
 
-[VMC Protocol](https://protocol.vmc.info/english.html) is a network protocol for Virtual Motion Capture.
+[VMC Protocol](https://protocol.vmc.info/english.html) is a network protocol for Virtual Motion Capture which encodes tracking information in [OSC packets](https://en.wikipedia.org/wiki/Open_Sound_Control).
 
 ![VMC Protocol Logo](/docs/vmpc_logo_128x128.png)
 
@@ -43,8 +43,8 @@ The plugin has numerous options to control behavior:
 | Option | Description |
 | :----- | :---------- |
 | Tracking - Position Mode | Controls the position of the character:<br>- Free = Free Movement<br>- Calibrate = Calibrate to origin on first frame<br>- Locked = Lock to origin |
-| Tracking - Face Tracker Name | Name for the XRFaceTracker |
-| Tracking - Body Tracker Name | Name for the XRBodyTracker |
+| Tracking - Face Tracker Name | Name for the [XRFaceTracker](https://docs.godotengine.org/en/latest/classes/class_xrfacetracker.html) |
+| Tracking - Body Tracker Name | Name for the [XRBodyTracker](https://docs.godotengine.org/en/latest/classes/class_xrbodytracker.html) |
 | Network - Udp Listener Port | Port to listen for VMC network packets |
 
 ### Character Importing
@@ -75,8 +75,7 @@ Note that the Face Tracker name should match the Face Tracker Name specified in 
 
 ### VMC Tracking Application
 
-A VMC tracking application must be used to capture the users body and face information and stream it over the VMC protocol. One option that works well is [XR Animator](https://github.com/ButzYung/SystemAnimatorOnline)
-when configured with an avatar equipped with the full ARKit 52 blendshapes.
+A VMC tracking application must be used to capture the users body and face information and stream it over the VMC protocol. One option that works well is [XR Animator](https://github.com/ButzYung/SystemAnimatorOnline) when configured with an avatar equipped with the full ARKit 52 blendshapes.
 
 The models in the demo project use the public [Test Chan](https://kanafuyuko.booth.pm/items/5419110) and [Test Kun](https://kanafuyuko.booth.pm/items/5420804) models by Kana Fuyuko
 
