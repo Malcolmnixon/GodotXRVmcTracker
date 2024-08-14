@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dkkew3u3hi7md"]
+[gd_scene load_steps=14 format=3 uid="uid://dkkew3u3hi7md"]
 
 [ext_resource type="Script" path="res://demo.gd" id="1_7k4ei"]
 [ext_resource type="PackedScene" uid="uid://bhc6nngwjdvum" path="res://assets/test_chan/Test-Chan.fbx" id="1_lkeve"]
