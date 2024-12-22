@@ -1,3 +1,6 @@
+# 1.3.0
+- Fix default port
+
 # 1.2.0
 - Updated for changes to XR Tracker names and hierarchy
 

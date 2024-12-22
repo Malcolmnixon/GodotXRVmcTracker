@@ -19,7 +19,7 @@ extends Node
 @export_enum("Free", "Calibrate", "Locked") var position_mode : int = 0
 
 ## UDP listener port
-@export var udp_listener_port : int = 7004
+@export var udp_listener_port : int = 39539
 
 
 # Tracker source
