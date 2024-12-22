@@ -16,7 +16,7 @@ Official releases are tagged and can be found [here](https://github.com/Malcolmn
 The following branches are in active development:
 |  Branch   |  Description                  |  Godot version   |
 |-----------|-------------------------------|------------------|
-|  master   | Current development branch    |  Godot 4.3-dev6+ |
+|  master   | Current development branch    |  Godot 4.3       |
 
 
 ## Overview
